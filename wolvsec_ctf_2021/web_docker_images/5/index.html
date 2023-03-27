@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+<p>Note: dirbuster, nikto, etc.. are not needed</p>
+<form action="/submit" method="post">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="color">Favorite Color:</label><br>
+    <input type="text" id="color" name="color"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<!--
+The above form will POST a request with a Content-Type value of: application/x-www-form-urlencoded
+
+The developer writing the backend over-engineered it to also accept other Content-Type values:
+
+application/json
+text/xml
+
+The flag is at /ctf/app/flag.txt
+-->
+
+</body>
+</html>
+

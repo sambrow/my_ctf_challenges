@@ -1,0 +1,8 @@
+{
+  "main": "server.js",
+  "dependencies": {
+    "express": "4.17.1",
+    "fast-xml-parser": "3.18.0",
+    "he": "1.2.0"
+  }
+}

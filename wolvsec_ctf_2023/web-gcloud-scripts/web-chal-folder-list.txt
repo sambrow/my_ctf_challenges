@@ -1,0 +1,6 @@
+challenges/filter-madness
+challenges/hidden-css
+challenges/zombie-101
+challenges/zombie-201
+challenges/zombie-301
+challenges/zombie-401

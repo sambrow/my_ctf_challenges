@@ -1,0 +1,6 @@
+The app prevents you from using {$flag} as the name/color field values since it strips out the $.
+However, if you study the source code and, in particular, the unit tests, you'll see an old variant that allows:
+
+{~flag}
+
+enter this for the name or color and you'll get the flag.

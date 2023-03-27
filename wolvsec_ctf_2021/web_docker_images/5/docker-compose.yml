@@ -1,0 +1,10 @@
+version: "2.2"
+
+services:
+  glsc-2021-web-5:
+    build: .
+    cpus: 0.1
+    mem_limit: 100M
+    restart: always
+    ports:
+      - "12345:12345"
