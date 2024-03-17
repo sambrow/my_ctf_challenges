@@ -3,7 +3,7 @@ import requests
 
 # Note: This chal has per-team instances SO you have to spin up your instance
 # and THEN set it here before.
-URL = os.getenv('CHAL_URL') or 'https://dyn-svc-order-up-xzt52u0rhv6nh4eo2w0q-okntin33tq-uc.a.run.app/'
+URL = os.getenv('CHAL_URL') or 'https://dyn-svc-order-up-ps28rtskmrv67quba0hu-okntin33tq-ul.a.run.app/'
 URL = URL + '/query'
 
 def tryUrl(expression):
