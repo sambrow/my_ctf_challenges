@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  gauntlet-app :
+    build: .
+    image: gauntlet:1.0
+    container_name: gauntlet
+    init: true
+    restart: always
+    ports:
+      - 5000:5000
+

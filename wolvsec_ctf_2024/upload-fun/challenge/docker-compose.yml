@@ -1,0 +1,11 @@
+version: "2.2"
+
+services:
+  upload-fun:
+    build: .
+    image: upload-fun:1.0
+    container_name: upload-fun
+    init: true
+    restart: always
+    ports:
+      - 80:80
