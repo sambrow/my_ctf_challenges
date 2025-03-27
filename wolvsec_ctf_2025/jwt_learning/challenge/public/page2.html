@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JWT Learning Page 2</title>
+</head>
+<body>
+<div>
+    You should have gotten these two JSON outputs from decoding the first two regions of the JWT:
+    <pre>
+    {"alg":"HS256","typ":"JWT"}
+    </pre>
+    <pre>
+    {"username":"sam","isAdmin":false,"iat":1738887694,"exp":1738889494}
+    </pre>
+</div>
+<br/>
+<div>
+    The first JSON conveys which cryptographic signing algorithm was used to create the token.
+    <br/>
+    <br/>
+    The second JSON contains the "claims".  It says the <b>username</b> is <b>sam</b> and that they are not an admin. <b>iat</b> stands for "issued at" and <b>exp</b> stands for "expiration". These are date/time stamps but we won't worry about these for this challenge.
+</div>
+<br/>
+<div>
+    To get your own JWT token, fill out the form below and submit it.
+</div>
+<br/>
+<br/>
+<br/>
+<form id="form" method="GET" action="/get-token">
+    <label for="username">Username:</label>
+    <input id="username" type="text" name="username">
+    <input type="submit" value="Submit">
+</form></body>
+</html>

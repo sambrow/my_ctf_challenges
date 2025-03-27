@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JWT Learning Page 4</title>
+</head>
+<body>
+<div>
+    Now we are ready to make our first try for the flag.
+    <br/>
+    <br/>
+    Try to get it by going to the <a href="/get-flag" target="_blank">/get-flag</a> page.
+</div>
+<br/>
+<div>
+    The cookie you got earlier was sent to the server and the code running at /get-flag studied it and noticed that the <b>isAdmin</b> property is <b>false</b> and so... no flag.
+</div>
+<br/>
+<br/>
+<div>
+    If you go back to the jwt.io tab you brought up earlier, notice you can EDIT the JSON in the PAYLOAD window. (for now don't touch the other windows)
+    <br/>
+    <br/>
+    As you make edits, the JWT on the left is updated to match!
+    <br/>
+    <br/>
+    Edit the PAYLOAD in jwt.io to set <b>isAdmin</b> to: <b>true</b>
+</div>
+<br/>
+<div>
+    As you make this edit, the second region on the left is updated.
+    <br/>
+    <br/>
+    Notice the third region is also updated. This region holds the digital signature. Since we don't yet have the secret key used to sign JWTs for this application, there is no way that we'll be able to use the tampered JWT on the left of jwt.io to get the flag.
+</div>
+<br/>
+<div>
+    Even though it won't work, let's try it out anyway just to learn.
+</div>
+<div>
+    You should see something like this in your jwt.io window:
+    <br/>
+    <img src="images/jwt-io2.jpg" style="width: 55vw; min-width: 330px;">
+</div>
+<br/>
+<div>
+    Copy the JWT on the left to the clipboard.
+    <br/>
+    <br/>
+    Then go back to your Developer Tools window and double-click the cookie value to select it, then press Delete to erase it entirely:
+    <br/>
+    <img src="images/chrome-cookies2.jpg" style="width: 55vw; min-width: 330px;">
+</div>
+<br/>
+<div>
+    Now paste your JWT from the clipboard into this location.
+    <br/>
+    <br/>
+    With the tampered JWT in place, lets try for the flag again:  <a href="/get-flag" target="_blank">/get-flag</a>
+</div>
+<br/>
+<div>
+    You should have gotten an error that the token failed verification.
+    <br/>
+    <br/>
+    Indeed, this is what we expected since we don't yet know the secret used to sign it.
+</div>
+<br/>
+<div>
+    Click <a href="/page5.html">here</a> to continue.
+</div>
+<br/>
+<div>
+
+</div>
+</body>
+</html>

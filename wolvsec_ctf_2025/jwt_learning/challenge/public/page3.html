@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JWT Learning Page 3</title>
+</head>
+<body>
+<div>
+    When you submitted your username, the HTTP response included a <b>Set-Cookie</b> response header whose value was a JWT.
+    <br/>
+    <br/>
+    If you happen to be unfamiliar with cookies, here is a great <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">tutorial</a>.
+</div>
+<br/>
+<div>
+    To see the cookie, you need to open the Developer Tools panel in your browser.
+    <br/>
+    For many browsers you can press the F12 key to do this. Please google for this if you are having trouble.
+</div>
+<br/>
+<div>
+    Once you have the Developer Tools open, you need to find the correct tab to see the cookies.
+    <ul>
+        <li>For Chrome it is the <b>Application</b> tab. </li>
+        <li>For Firefox it is the <b>Storage</b> tab.</li>
+    </ul>
+    In both cases, expand the Cookies item on the left, then click the URL.
+</div>
+<br/>
+<div>
+    Here is a screenshot from Chrome:
+    <br/>
+    <img src="images/chrome-cookies.jpg" style="width: 55vw; min-width: 330px;">
+</div>
+<br/>
+<div>
+    Copy the ENTIRE cookie value (to the right of the "access-token" cookie name) and paste it into a text editor for easy study. Make sure you have captured all three regions.
+    <br/>
+    <br/>
+    It might be difficult to select the entire cookie value since it is mostly off-screen. One trick is to double-click on it.
+</div>
+<br/>
+<div>
+    Rather than using the base64 decoder site we used earlier, let's do something more fun.
+    <br/>
+    <br/>
+    Go to <a href="https://jwt.io/" target="_blank">https://jwt.io</a> and paste in your entire JWT into the left side after first removing its example.
+</div>
+<br/>
+<div>
+    You should see something like this:
+    <br/>
+    <img src="images/jwt-io1.jpg" style="width: 55vw; min-width: 330px;">
+
+</div>
+<br/>
+<div>
+    Here, this site has done the base64 decoding for us!
+</div>
+<br/>
+<div>
+    Please go to <a href="/page4.html">this page</a> to continue.
+</div>
+</body>
+</html>

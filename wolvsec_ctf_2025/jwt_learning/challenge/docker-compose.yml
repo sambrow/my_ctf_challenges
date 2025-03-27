@@ -1,0 +1,8 @@
+services:
+  wctf-2025-beginner-web-jwt-learning:
+    build: .
+    image: wctf-2025-beginner-web-jwt-learning:1
+    container_name: wctf-2025-beginner-web-jwt-learning
+    restart: always
+    ports:
+      - "3000:3000"

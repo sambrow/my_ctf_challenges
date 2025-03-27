@@ -1,0 +1,11 @@
+services:
+  app:
+    build: app
+    container_name: limited-app
+    ports:
+      - "40000:8000"
+    depends_on:
+      - db
+  db:
+    build: db
+    container_name: limited-db

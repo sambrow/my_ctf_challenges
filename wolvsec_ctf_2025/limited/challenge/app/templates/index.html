@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Limited!</title>
+</head>
+<body>
+<div>
+    Restrict to <b>price</b>
+    <select id="price_op">
+        <option value="&lt;" selected="selected">&lt;</option>
+        <option value="&lt;=">&lt;=</option>
+        <option value="=">=</option>
+        <option value=">">&gt;</option>
+        <option value=">=">&gt;=</option>
+    </select>
+    <input id="price" value="5.00"> and <input id="limit" value="5"> items. <button id="query">Query</button>
+</div>
+<h1>Items that can be ordered</h1>
+<table id="data-table">
+    <thead>
+    <tr>
+        <th>Select</th>
+        <th>Category</th>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Table rows will be inserted here dynamically -->
+    </tbody>
+</table>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

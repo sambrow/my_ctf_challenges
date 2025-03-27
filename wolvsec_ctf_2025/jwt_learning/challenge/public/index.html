@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JWT Learning</title>
+</head>
+<body>
+<div>
+    Welcome to the <b>JWT Learning</b> challenge. Over the course of the challenge, we'll try to teach you a little about this topic.
+</div>
+<br/>
+<div>
+    JWT stands for JSON Web Token.
+</div>
+<br/>
+<div>
+    This is a digitally signed token that carries information called "claims" about the person who just logged into the system. It is just a bunch of text in a special format.
+</div>
+<br/>
+<div>
+Here is what one looks like:
+    <pre>
+        eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3Mzg4ODc2OTQsImV4cCI6MTczODg4OTQ5NH0.KrRwMea_fXtfp-IbvFCn3Q-HiNVMitips0SVxODfGJc
+    </pre>
+</div>
+<br/>
+<div>
+If you look carefully, you'll see this has three regions separated by two periods.
+    <ul>
+        <li><pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</pre></li>
+        <li><pre>.</pre></li>
+        <li><pre>eyJ1c2VybmFtZSI6InNhbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3Mzg4ODc2OTQsImV4cCI6MTczODg4OTQ5NH0</pre></li>
+        <li><pre>.</pre></li>
+        <li><pre>KrRwMea_fXtfp-IbvFCn3Q-HiNVMitips0SVxODfGJc</pre></li>
+    </ul>
+</div>
+<br/>
+<div>
+    The first two regions are base64 encoding of JSON. JSON is a way Javascript represents data.  Here is an example simple JSON object:
+    <pre>
+        {"color": "blue"}
+    </pre>
+</div>
+<br/>
+<div>
+    To better understand this, let's practice doing this encoding ourself.  Copy the above JSON to the clipboard and then go to <a href="https://base64.guru/converter/encode" target="_blank">this page</a>.
+</div>
+<br/>
+<div>
+Paste the JSON into the <b>Text*</b> window and then click the <b>Encode to Base64</b> button. You should see this appear in the <b>Base64</b> output window:
+    <pre>eyJjb2xvciI6ICJibHVlIn0=</pre>
+</div>
+<br/>
+<div>
+    To understand that this is an encoding and not an encryption, let's decode it. Copy the base64 string to the clipboard and then go to <a href="https://base64.guru/converter/decode" target="_blank">this page<a></a>.
+</div>
+<br/>
+<div>
+As before, paste it in and click the button. You should see the original JSON come back. That proves that this is just a different way of representing the original characters and that it is completely reversible without needing any kind of password.
+</div>
+<br/>
+<div>
+Of interest is the <b>=</b> symbol at the end. This is something called "padding" but is not strictly needed by most modern base64 decoders. In fact, you can remove the <b>=</b> from your example and click the button and you'll get the exact same JSON string back.
+</div>
+<br/>
+<div>
+Now, use what you've learned to copy each of the first two JWT regions into the base64 decoder page and see what comes out.
+</div>
+<br/>
+<div>
+Click <a href="/page2.html">here</a> to advance to the next page.
+</div>
+<br/>
+<div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JWT Learning Page 5</title>
+</head>
+<body>
+<div>
+    You may have heard about <b>/robots.txt</b> resources.
+    <br/>
+    <br/>
+    You can read more about them <a href="https://en.wikipedia.org/wiki/Robots.txt" target="_blank">here</a>.
+</div>
+<br/>
+<div>
+    In a new browser tab, try to go to the <b>/robots.txt</b> resource of this web app.
+    <br/>
+    <br/>
+    You can copy the URL from the address bar in this window and use it in a new tab. However, you'll want to delete the singleton <b>/</b> character and everything after it.  Then add <b>/robots.txt</b> onto the end of what is remaining.
+    <br/>
+    <br/>
+    See if you can use what you learn there to obtain the secret text string used to sign JWTs for this app.
+</div>
+<br/>
+<div>
+    Onse you have it, go back to your jwt.io tab where you have set <b>isAdmin</b> to <b>true</b> and very carefully click in the editable field in the VERIFY SIGNATURE window.
+    <br/>
+    <br/>
+    First clear out ALL of the current text in that window.
+    <br/>
+    <br/>
+    Then paste in the secret text string. You should see something like this:
+    <br/>
+    <img src="images/jwt-io3.jpg" style="width: 55vw; min-width: 330px;">
+</div>
+<div>
+    Now you are very close!
+    <br/>
+    <br/>
+    Copy the JWT from the left side of jwt.io and, as before, carefully update your cookie in the Developer Tools window using this tampered JWT.
+</div>
+<br/>
+<div>
+    If everything went well, you can now get the flag here:
+    <br/>
+    <br/>
+    <a href="/get-flag" target="_blank">/get-flag</a>
+</div>
+<br/>
+<div>
+    It is possible, but unlikely, that your token will have expired if you took a long break somewhere during this process.  If that happens, just start all over again from the beginning.
+    <br/>
+    <br/>
+</div>
+<br/>
+<div>
+    We hope this was a gentle introduction to JWTs. There are lots of resources online to learn more if you are interested.
+    <br/>
+    <br/>
+    Here is at least one <a href="https://portswigger.net/web-security/jwt" target="_blank">interesting article</a>.
+</div>
+<br/>
+<div>
+    <br/>
+    <br/>
+</div>
+<br/>
+</body>
+</html>

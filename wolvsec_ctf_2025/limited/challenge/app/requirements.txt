@@ -1,0 +1,4 @@
+flask
+Flask-Limiter
+Flask-MySQLdb
+

@@ -1,0 +1,3 @@
+User-agent: * 
+Disallow: /TOKEN_SECRET.txt
+# Note to self: rework the secret management before going live

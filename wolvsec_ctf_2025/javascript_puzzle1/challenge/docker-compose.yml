@@ -1,0 +1,8 @@
+services:
+  wctf-2025-javascript-puzzle1:
+    build: .
+    image: wctf-2025-javascript-puzzle1:1
+    container_name: wctf-2025-javascript-puzzle1
+    restart: always
+    ports:
+      - "8000:8000"
